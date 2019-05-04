@@ -14,7 +14,7 @@ var forcast = (Latitute, Longitute, callback) => {
     }else if (body.error) {
       err = 'unable to find location.';
     }else {
-      res = body.currently.summary + ', Hey its ' + body.currently.temperature + ' degrees out. There\'s ' + body.currently.precipProbability + ' chance of rain';
+      res = body.currently.summary + ', Hey its ' + body.currently.temperature + ' degrees out. There\'s ' + body.currently.precipProbability + ' chance of rain' + ' Wind speed: ' + body.currently.windSpeed + ' Humidity: ' + body.currently.humidity;
     }
 
     callback(err, res);
